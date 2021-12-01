@@ -1,5 +1,5 @@
 #!/bin/bash
-yum install java-1.8.0-openjdk -y
+sleep 40
 cat >/etc/yum.repos.d/mongodb-org-5.0.repo <<EOL
 [mongodb-org-5.0]
 name=MongoDB Repository
@@ -8,7 +8,8 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
 EOL
-yum install mongodb-org -y
+sleep 30
+yum install mongodb-org java-1.8.0-openjdk -y
 systemctl daemon-reload
 systemctl start mongod
 systemctl enable mongod
