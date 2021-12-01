@@ -14,7 +14,6 @@ permissions:
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
-      timeout: 40
       runas: root
   ApplicationStart:
     - location: scripts/start_application.sh
