@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/server
+cd /home/ec2-user/server/scripts
 sudo yum install java-1.8.0-openjdk -y
 sudo cp ./mongodb.repo /etc/yum.repos.d/
 sudo yum update -y
